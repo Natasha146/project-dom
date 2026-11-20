@@ -1,0 +1,36 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree Explorer</title>
+</head>
+<body>
+
+    <div id="grandparent">
+        <div id="parent">
+            <p id="child">I am the child</p>
+        </div>
+    </div>
+
+    <script>
+        let child = document.getElementById("child");
+
+        let parent = child.parentElement;
+        console.log(parent.id);
+
+        let grandparent = parent.parentElement;
+        console.log(grandparent.id);
+
+        parent.style.backgroundColor = "lightblue";
+
+        grandparent.style.backgroundColor = "lightgreen";
+
+        console.log(child.parentElement.parentElement.id);
+
+        child.textContent = "I am inside the parent and grandparent!";
+    </script>
+
+</body>
+</html>
